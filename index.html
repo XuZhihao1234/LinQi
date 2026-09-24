@@ -1,77 +1,78 @@
 <!DOCTYPE html>
-<!-- 这一行声明：这是一个 HTML5 网页 -->
 <html lang="zh-CN">
 <head>
-    <!-- head 是"头部"，放网页的配置信息，用户看不到 -->
     <meta charset="UTF-8">
-    <!-- 上面这行指定文字编码，中文网页必须要有，否则会乱码 -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- 上面这行让网页在手机上也显示正常 -->
-    <title>我的个人主页</title>
-    <!-- title 是浏览器标签页上显示的文字 -->
+    <title>个人主页</title>
     <link rel="stylesheet" href="style.css">
-    <!-- 上面这行把外部的样式文件 style.css 连接进来 -->
 </head>
 <body>
-    <!-- body 是"身体"，用户能看到的所有内容都写在这里 -->
+    <!-- 整个页面内容都包在 page 里，居中、限宽 -->
+    <main class="page">
 
-    <!-- 顶部导航栏 -->
-    <nav class="navbar">
-        <span class="logo">我的主页</span>
-        <a href="#about">关于我</a>
-        <a href="#projects">项目</a>
-        <a href="#contact">联系我</a>
-    </nav>
+        <!-- ===== 头部：头像 + 名字 + 一句话介绍 + 社交入口 ===== -->
+        <section class="hero">
+            <!-- 圆形头像占位：等你提供照片后，把 XZ 换成 <img src="头像.jpg"> 即可 -->
+            <div class="avatar">XZ</div>
 
-    <!-- 主页大标题区（也叫 Hero 区） -->
-    <header class="hero">
-        <h1>你好，我是「你的名字」</h1>
-        <!-- h1 是最大的一级标题，一般一页只有一个 -->
-        <p>这是我的第一个静态网页，由 GitHub Pages 免费托管。</p>
-        <a class="btn" href="#contact">和我联系</a>
-    </header>
+            <h1>你的名字</h1>
+            <!-- tagline：一句话介绍自己的身份 / 领域 -->
+            <p class="tagline">前端开发 · 内容创作者 · 终身学习者</p>
 
-    <!-- 关于我 -->
-    <section id="about" class="section">
-        <h2>关于我</h2>
-        <p>在这里写一段自我介绍。可以介绍你的身份、兴趣、正在学的东西。</p>
-        <ul>
-            <li>爱好一</li>
-            <li>爱好二</li>
-            <li>爱好三</li>
-        </ul>
-    </section>
+            <!-- bio：2~3 句自我介绍，用户会在这里真正了解你 -->
+            <p class="bio">
+                这里写一段简短但有信息量的自我介绍。
+                比如你的背景、正在做的事、想找什么样的人交流。
+            </p>
 
-    <!-- 我的项目 -->
-    <section id="projects" class="section">
-        <h2>我的项目</h2>
-        <div class="cards">
-            <div class="card">
-                <h3>项目一</h3>
-                <p>简单描述这个项目做了什么。</p>
+            <!-- 社交媒体入口：每一行是"平台名 + 链接"，改成你自己的 -->
+            <div class="socials">
+                <a class="pill" href="https://github.com/XuZhihao1234" target="_blank">GitHub</a>
+                <a class="pill" href="mailto:你的邮箱@example.com">邮箱</a>
+                <a class="pill" href="#" target="_blank">微信</a>
+                <a class="pill" href="#" target="_blank">哔哩哔哩</a>
+                <a class="pill" href="#" target="_blank">微博</a>
             </div>
-            <div class="card">
-                <h3>项目二</h3>
-                <p>简单描述这个项目做了什么。</p>
-            </div>
-            <div class="card">
-                <h3>项目三</h3>
-                <p>简单描述这个项目做了什么。</p>
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- 联系我 -->
-    <section id="contact" class="section">
-        <h2>联系我</h2>
-        <p>邮箱：<a href="mailto:你的邮箱@example.com">你的邮箱@example.com</a></p>
-        <p>GitHub：<a href="https://github.com/你的用户名" target="_blank">github.com/你的用户名</a></p>
-        <!-- target="_blank" 表示在新标签页打开链接 -->
-    </section>
+        <!-- ===== 关于我 ===== -->
+        <section class="section">
+            <h2>关于我</h2>
+            <p>
+                这里放你的详细自我介绍，可以写 3~4 句话：
+                教育或职业背景、擅长的事情、性格特点。
+                这一段的风格可以比上面更口语化一点，让人觉得亲切。
+            </p>
+        </section>
 
-    <!-- 页脚 -->
-    <footer>
-        <p>© 2026 你的名字 · 由 GitHub Pages 托管</p>
-    </footer>
+        <!-- ===== 技能 / 兴趣 ===== -->
+        <section class="section">
+            <h2>技能与兴趣</h2>
+            <div class="tags">
+                <span class="tag">技能一</span>
+                <span class="tag">技能二</span>
+                <span class="tag">技能三</span>
+                <span class="tag">兴趣一</span>
+                <span class="tag">兴趣二</span>
+                <span class="tag">兴趣三</span>
+            </div>
+        </section>
+
+        <!-- ===== 联系我 ===== -->
+        <section class="section">
+            <h2>联系我</h2>
+            <p>想交流、合作或交朋友，欢迎通过这些方式找到我：</p>
+            <div class="socials">
+                <a class="pill" href="mailto:你的邮箱@example.com">邮箱</a>
+                <a class="pill" href="https://github.com/XuZhihao1234" target="_blank">GitHub</a>
+            </div>
+        </section>
+
+        <!-- 页脚：版权信息 -->
+        <footer>
+            <p>© 2026 你的名字 · 由 GitHub Pages 免费托管</p>
+        </footer>
+
+    </main>
 </body>
 </html>
